@@ -36,7 +36,7 @@ class Scan extends CI_Controller
             $this->response([
                 'status' => false,
                 'message' => 'Data pelanggan tidak ditemukan'
-            ], 404); //HTTP_NOT_FOUND
+            ],); //HTTP_NOT_FOUND
         }
     }
 
@@ -72,7 +72,7 @@ class Scan extends CI_Controller
         foreach ($id_mealbox as $im) {
             array_push($mealbox, array(
                 'id_pelanggan' => $id_pelanggan,
-                'id_mealbox' => $im[0],
+                'id_mealbox' => $im,
                 'id_personel' => $id_personel,
                 'status' => $status
             ));
