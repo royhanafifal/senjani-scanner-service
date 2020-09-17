@@ -40,17 +40,17 @@ class Personel extends CI_Controller
         }
     }
 
-    public function index_put()
+    public function update_personel_post()
     {
-        $id = $this->put('id');
-        $jabatan = $this->put('nama_jabatan');
+        $id = $this->post('id');
+        $jabatan = $this->post('nama_jabatan');
 
         $jabatan = ($jabatan == 'Kurir') ? 1 : 2;
 
         $data = [
-            'nama_lengkap' => $this->put('nama_lengkap'),
+            'nama_lengkap' => $this->post('nama_lengkap'),
             'id_jabatan' => $jabatan,
-            'email' => $this->put('email'),
+            'email' => $this->post('email'),
             'date_updated' => date('Y-m-d H:i:s')
         ];
 

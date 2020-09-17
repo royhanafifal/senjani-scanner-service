@@ -40,12 +40,12 @@ class Pelanggan extends CI_Controller
         }
     }
 
-    public function index_put()
+    public function update_pelanggan_post()
     {
-        $id = $this->put('id');
+        $id = $this->post('id');
         $data = [
-            'nama_lengkap' => $this->put('nama_lengkap'),
-            'no_hp' => $this->put('no_hp'),
+            'nama_lengkap' => $this->post('nama_lengkap'),
+            'no_hp' => $this->post('no_hp'),
             'date_updated' => date('Y-m-d H:i:s')
         ];
 

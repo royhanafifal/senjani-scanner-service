@@ -40,12 +40,12 @@ class Mealbox extends CI_Controller
         }
     }
 
-    public function index_put()
+    public function update_mealbox_post()
     {
-        $id = $this->put('id');
+        $id = $this->post('id');
         $data = [
-            'jenis' => $this->put('jenis'),
-            'keterangan' => $this->put('keterangan'),
+            'jenis' => $this->post('jenis'),
+            'keterangan' => $this->post('keterangan'),
             'date_updated' => date('Y-m-d H:i:s')
         ];
 
